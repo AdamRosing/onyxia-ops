@@ -1,7 +1,7 @@
 onyxia:
   ingress:
     enabled: true
-    #ingressClassName: nginx
+    ingressClassName: nginx
     hosts:
       - host: onyxia.127.0.0.1.nip.io
   web:
@@ -25,7 +25,9 @@ onyxia:
           singleNamespace: true,
           authenticationMode: "serviceAccount",
           expose: {
-            domain: "kub.127.0.0.1.nip.io"
+            domain: "kub.127.0.0.1.nip.io",
+            ingress: true,
+            ingressClassName: "nginx"
           }
         }
       }
