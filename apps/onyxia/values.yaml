@@ -3,7 +3,7 @@ onyxia:
     enabled: true
     #ingressClassName: nginx
     hosts:
-      - host: datalab.$DOMAIN
+      - host: onyxia.127.0.0.1.nip.io
   web:
     env:
       #GLOBAL_ALERT: |
@@ -25,7 +25,7 @@ onyxia:
           singleNamespace: true,
           authenticationMode: "serviceAccount",
           expose: {
-            domain: "lab.$DOMAIN"
+            domain: "kub.127.0.0.1.nip.io"
           }
         }
       }
