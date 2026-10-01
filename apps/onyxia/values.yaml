@@ -1,4 +1,5 @@
 onyxia:
+  replicas: 2
   ingress:
     enabled: true
     ingressClassName: nginx
